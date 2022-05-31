@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>amazon clone</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="icon" href="images/amazon.ico">
+  <link rel="stylesheet" href="listing_mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/2f329cfa89.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="header_left">
+      <a href="../index.html"><img class="header_logo" src="images/logo.png" alt="LOGO" title="HOME"></a>
+      <div class="header_location_logo">
+        <img class="header_location_logo" src="images/location.png" alt="your address">
+      </div>
+      <div class="header_nav_option">
+        <p class="header_nav_option_line1">Hello</p>
+        <span class="header_nav_option_line2">Select your address</span>
+      </div>
+    </div>
+
+    <div class="header_search">
+      <input class="header_search_box" type="text">
+      <img src="images/search_icon.png" alt="search" class="header_search_icon">
+    </div>
+    <div class="header_right">
+      <div class="header_nav_option">
+        <p class="header_nav_option_line1"><span>Hello,</span><span>Sign in</span></p>
+        <span class="header_nav_option_line2">Account and Lists</span>
+      </div>
+      <div class="header_nav_option">
+        <p class="header_nav_option_line1">Return</p>
+        <span class="header_nav_option_line2">& Orders</span>
+      </div>
+      <div class="header_nav_option">
+        <p class="header_nav_option_line1"></p>
+        <span class="header_nav_option_line2"></span>
+      </div>
+      <div class="header_nav_option cart_count">
+        <p class="header_nav_option_line1 cart_count">0</p>
+        <img src="images/cart.jpg" alt="cart" class="header_cart_logo">
+      </div>
+    </div>
+  </header>
+
+  <!-- navbar -->
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">All</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">New Release</a></li>
+              <li><a class="dropdown-item" href="#">Best Seller</a></li>
+              <li><a class="dropdown-item" href="#">Trending</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mobiles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Fashion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Electronics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home & Kitchen</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- listing content -->
+  
+  <main>
+    <div class="row main-wrapper">
+      <div class="col-md-2 filter-wrapper">
+        <h4>Filters</h4>
+        <div class="type filter-item">
+          <h5>Type</h5>
+          <div>
+            <input type="checkbox">
+            <span>Smartphones</span>
+          </div>
+          <div>
+            <input type="checkbox">
+            <span>Featurephones</span>
+          </div>
+        </div>
+        <div class="price filter-item">
+          <h5>Price</h5>
+          <div class="dropdown">
+            <select name="price" id="price">
+              <option value=" ">Select Price Band</option>
+              <option value="100">0 to 100</option>
+              <option value="200">101 to 200</option>
+              <option value="250">200 to 250</option>
+              <option value="300">250 to 300</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter-rating filter-item">
+          <h5>Customer Rating</h5>
+          <div class="4stars">
+            <input type="checkbox">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span>
+              & up
+            </span>
+          </div>
+          <div class="3stars">
+            <input type="checkbox">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span>
+              & up
+            </span>
+          </div>
+          <div class="2stars">
+            <input type="checkbox">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span>
+              & up
+            </span>
+          </div>
+          <div class="4stars">
+            <input type="checkbox">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span>
+              & up
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10 content-section-wrapper">
+        <div class="contect-section-deals-wrapper">
+          <div class="contect-section-deals-heading">
+            <span class="deals-heading">Hot new releases</span>
+            <a class="deals-heading-link" href="">See more</a>
+          </div>
+          <div class="row deals-items">
+            <div class="col-md-3 deals-item">
+              <div class="deals-item-image-wrapper">
+                <img class = "deals-item-image" src="images/newrelease-1.jpg" alt="Oneplus">
+              </div>
+              <h5 class="deals-item-price"> &#8377 25499</h5>
+              <p class="deals-item-price-strikethrough">&#8377 25499</p>
+              <p class="deals-item-name">OnePlus node CE 2 5G</p>
+              <p class="deals-item-description">(Blue, 8GB, 256GB)</p>
+              <div class="deals-item-ratings">
+                <span class="deals-item-ratings-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </span><span>20,857</span>
+              </div>
+            </div>
+            <div class="col-md-3 deals-item">
+              <div class="deals-item-image-wrapper">
+                <img class = "deals-item-image" src="images/newrelease-1.jpg" alt="Oneplus">
+              </div>
+              <h5 class="deals-item-price"> &#8377 25499</h5>
+              <p class="deals-item-price-strikethrough">&#8377 25499</p>
+              <p class="deals-item-name">OnePlus node CE 2 5G</p>
+              <p class="deals-item-description">(Blue, 8GB, 256GB)</p>
+              <div class="deals-item-ratings">
+                <span class="deals-item-ratings-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </span><span>20,857</span>
+              </div>
+            </div>
+            <div class="col-md-3 deals-item">
+              <div class="deals-item-image-wrapper">
+                <img class = "deals-item-image" src="images/newrelease-1.jpg" alt="Oneplus">
+              </div>
+              <h5 class="deals-item-price"> &#8377 25499</h5>
+              <p class="deals-item-price-strikethrough">&#8377 25499</p>
+              <p class="deals-item-name">OnePlus node CE 2 5G</p>
+              <p class="deals-item-description">(Blue, 8GB, 256GB)</p>
+              <div class="deals-item-ratings">
+                <span class="deals-item-ratings-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </span><span>20,857</span>
+              </div>
+            </div>
+            <div class="col-md-3 deals-item">
+              <div class="deals-item-image-wrapper">
+                <img class = "deals-item-image" src="images/newrelease-1.jpg" alt="Oneplus">
+              </div>
+              <h5 class="deals-item-price"> &#8377 25499</h5>
+              <p class="deals-item-price-strikethrough">&#8377 25499</p>
+              <p class="deals-item-name">OnePlus node CE 2 5G</p>
+              <p class="deals-item-description">(Blue, 8GB, 256GB)</p>
+              <div class="deals-item-ratings">
+                <span class="deals-item-ratings-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </span><span>20,857</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <p class="back-top">Back to top</p>
+
+  <!-- footer -->
+
+  <footer>
+      <div class="row footer">
+        <div class="col-md-4 footer-grid">
+          <h6 class="footer-grid-heading">Get to know us</h6>
+          <ul class="footer-grid-list">
+            <li class="footer-grid-link"><a href="">Careers</a></li>
+            <li class="footer-grid-link"><a href="">Amazon care</a></li>
+            <li class="footer-grid-link"><a href="">Gift a smile</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer-grid">
+          <h6 class="footer-grid-heading">Connect with Us</h6>
+          <ul class="footer-grid-list">
+            <li class="footer-grid-link"><a href="">Facebook</a></li>
+            <li class="footer-grid-link"><a href="">Twitter</a></li>
+            <li class="footer-grid-link"><a href="">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer-grid">
+          <h6 class="footer-grid-heading">Let Us Help You</h6>
+          <ul class="footer-grid-list">
+            <li class="footer-grid-link"><a href="">Your account</a></li>
+            <li class="footer-grid-link"><a href="">Return centre</a></li>
+            <li class="footer-grid-link"><a href="">Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="col-md-12 copy-right">&copy; 2022 Amazon.com Inc.</p>
+  </footer>
+</body>
+
+</html>
