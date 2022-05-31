@@ -114,7 +114,7 @@ header{
 /* listing- content  */
 .main-wrapper{
     display: flex;
-    margin: 10px;
+    margin: 20px;
 }
 
 .content-section-wrapper{
@@ -168,9 +168,10 @@ header{
     
 }
 .deals-item-image{
-    width: 80%;
+    width: 100%;
     object-fit: contain;
     margin-bottom: 25px;
+    padding: 0 !important;
 }
 .deals-item-name{
     font-weight: 500;
