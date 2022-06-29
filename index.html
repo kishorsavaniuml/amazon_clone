@@ -16,6 +16,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
 </head>
 
 <body>
@@ -25,13 +26,19 @@
   <header>
     <div class="header_left">
       <a href="index.html"><img class="header_logo" src="images/logo.png" alt="LOGO" title="HOME"></a>
-      <div class="header_location_logo">
-        <img class="header_location_logo" src="images/location.png" alt="your address">
-      </div>
-      <div class="header_nav_option">
-        <p class="header_nav_option_line1">Hello</p>
-        <span class="header_nav_option_line2">Select your address</span>
-      </div>
+      <a onclick="getLocation()" href="#" class="location-link">
+        <div class="location-section">
+          <div class="header_location_logo">
+            <img class="header_location_logo" src="images/location.png" alt="your address">
+          </div>
+          <div class="header_nav_option">
+            <p class="header_nav_option_line1">Hello</p>
+            <span class="header_nav_option_line2" id = "location-section-line-2">Select your location</span>
+          </div>
+        </div>
+      </a>
+      
+      
     </div>
 
     <div class="header_search">
@@ -283,6 +290,36 @@
     </div>
     <p class="col-md-12 copy-right">&copy; 2022 Amazon.com Inc.</p>
   </footer>
-</body>
+  <script>
+    let locationSectionLine2 = document.getElementById('location-section-line-2');
+    function getLocation() {
+      
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showData);
+      } else {
+        locationSectionLine2.innerText = "Your browser does not support geolocation"
+      }
 
+    }
+
+    function showData(data) {
+      
+      let latitude = data.coords.latitude;
+      let longitude = data.coords.longitude;
+      const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${latitude}&lon=${longitude}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
+      // calling api
+      fetch(url,{method: 'GET'})
+      // return promise
+      .then((response) => response.json())
+      // resolve promise
+      .then((data)=>{
+        
+        let cityName = data.city.name;
+        
+        locationSectionLine2.innerText = `${cityName}`;
+      });
+    }
+  </script>
+</body>
+  
 </html>

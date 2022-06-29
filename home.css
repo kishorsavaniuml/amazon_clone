@@ -8,6 +8,8 @@ body{
     background-color: #eaeded;
     
 }
+
+
 /* header */
 
 header{
@@ -42,6 +44,21 @@ header{
 .header_location_logo{
     width:20px;
     object-fit: contain;
+}
+
+.location-section{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-right: 5px;
+    
+}
+.location-link{
+    text-decoration: none;
+}
+
+.location-section:hover{
+    border: 1px solid white !important;
 }
 
 .header_search{
