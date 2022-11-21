@@ -17,6 +17,7 @@
     integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://kit.fontawesome.com/2f329cfa89.js" crossorigin="anonymous"></script>
+  <script src="listing_mobile.js"></script>
 </head>
 
 <body>
@@ -103,13 +104,12 @@
         <h4>Filters</h4>
         <div class="type filter-item">
           <h5>Type</h5>
-          <div>
-            <input type="checkbox">
-            <span>Smartphones</span>
-          </div>
-          <div>
-            <input type="checkbox">
-            <span>Featurephones</span>
+          <div class="dropdown">
+            <select name="type" id="type" onchange="getPriceBand()">
+              <option value=" ">Select Price Band</option>
+              <!-- <option value="100">Featurephones</option>
+              <option value="200">Smartphones</option> -->
+            </select>
           </div>
         </div>
         <div class="price filter-item">
@@ -117,10 +117,10 @@
           <div class="dropdown">
             <select name="price" id="price">
               <option value=" ">Select Price Band</option>
-              <option value="100">0 to 10,000</option>
+              <!-- <option value="100">0 to 10,000</option>
               <option value="200">10,000 to 20,000</option>
               <option value="250">20,000 to 25,000</option>
-              <option value="300">25,000 to 30,000</option>
+              <option value="300">25,000 to 30,000</option> -->
             </select>
           </div>
         </div>
@@ -291,6 +291,10 @@
     </div>
     <p class="col-md-12 copy-right">&copy; 2022 Amazon.com Inc.</p>
   </footer>
+  <script>
+    window.onload = getPhpneType();
+
+  </script>
 </body>
 
 </html>

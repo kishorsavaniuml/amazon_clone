@@ -1,0 +1,53 @@
+{
+    "type" : 
+    [
+        {
+            "id": 1,
+            "type": "Featurephones "
+        },
+            
+        {
+            "id": 2,
+            "type": "Smartphones "
+        }
+    ],
+
+    "price": 
+    [
+        {
+            "id": 1,
+            "price_band" : "500-1000",
+            "catagory_id": 1
+        },
+
+        {
+            "id": 2,
+            "price_band" : "1000-2000",
+            "catagory_id": 1
+        },
+
+        {
+            "id": 3,
+            "price_band" : "2000-3000",
+            "catagory_id": 1
+        },
+
+        {
+            "id": 4,
+            "price_band" : "3000-4000",
+            "catagory_id": 1
+        },
+
+        {
+            "id": 5,
+            "price_band" : "4000-5000",
+            "catagory_id": 2
+        },
+
+        {
+            "id": 6,
+            "price_band" : "above 5000",
+            "catagory_id": 2
+        }
+    ]
+}
